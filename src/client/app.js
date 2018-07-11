@@ -3,7 +3,9 @@ import Routes from "./routes";
 import '../assets/stylesheets/app.css';
 
 const App = () => (
-  <Routes />
+  <div class="app-container">
+    <Routes />
+  </div>
 );
 
 export default App;

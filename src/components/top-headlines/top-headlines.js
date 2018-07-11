@@ -1,10 +1,10 @@
 import React from 'react';
-import './top-headlines.css';
+import styles from './top-headlines.module.css';
 
 const RenderGrid = ({articles}) => {
   return(
     articles.map(item => (
-      <div class="wrapper-grid-item">
+      <div class={styles.gridItem}>
         <div>{item.title}</div>
         <img src={item.urlToImage} alt={item.title} />
       </div>
@@ -33,8 +33,8 @@ class TopHeadlines extends React.Component {
   render() {
     return(
       <div>
-        <h2 class="heading">Top Headlines</h2>
-        <div class="wrapper">
+        <h2 class={styles.heading}>Top Headlines</h2>
+        <div class={styles.wrapper}>
           <RenderGrid articles={this.state.articles} />
         </div>
       </div>
