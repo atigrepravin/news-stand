@@ -1,30 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Header } from "../components/header/header";
 import { Home } from "../pages/home";
 import { About } from "../pages/about";
 import { Contact } from "../pages/contact";
 
 const Routes = () => (
   <Router>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-
-      <hr />
-
+    <React.Fragment>
+      <Header />
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
-    </div>
+    </React.Fragment>
   </Router>
 )
 
