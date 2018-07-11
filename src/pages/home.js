@@ -1,9 +1,8 @@
 import React from 'react';
+import { TopHeadlines } from '../components/top-headlines/top-headlines';
 
 const Home = () => (
-  <div>
-    <h2>Home</h2>
-  </div>
+  <TopHeadlines />
 )
 
 export { Home };
