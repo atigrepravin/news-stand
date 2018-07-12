@@ -9,9 +9,11 @@ const Routes = () => (
   <Router>
     <React.Fragment>
       <Header />
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/contact" component={Contact} />
+      <div className="app-container">
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+    </div>
     </React.Fragment>
   </Router>
 )

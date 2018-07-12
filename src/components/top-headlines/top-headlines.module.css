@@ -13,6 +13,7 @@
 .gridItem {
   box-shadow: 0px 0 4px 2px #f5f1f1;
   padding: 15px;
+  background: #fff;
 }
 
 img {
