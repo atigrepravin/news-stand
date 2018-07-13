@@ -1,20 +1,28 @@
 import React from 'react';
 import s from './top-headlines.module.css';
 
-const RenderGrid = ({articles}) => {
+const RenderArticle = ({ article }) => {
+  const authorUrl = `//${new URL(article.url).hostname}`;
   return(
-    articles.map((item, index) => (
-      <article key={`article-${index}`} className={s.gridItem}>
-        <div className={s.imageHolder}>
-          <figure>
-            <a href="#" className={s.imgUrl}></a>
-            <img src="" alt="" />
-          </figure>
+    <article className={s.article}>
+      <figure className={s.imageHolder} style={{backgroundImage: `url(${article.urlToImage})`}}>
+        <a href="#" className={s.imgUrl}></a>
+        <img src={article.urlToImage} alt={article.title} />
+      </figure>
+      <div className={s.content}>
+        <h3 className={s.title}>{article.title}</h3>
+        <div className={s.meta}>
+          by <a href={authorUrl} target="_blank" className={s.author}>{article.author}</a>
+          <span className={s.timestamp}>221</span>
         </div>
-        <h3>{item.title}</h3>
-        <img src={item.urlToImage} alt={item.title} />
-      </article>
-    ))
+      </div>
+    </article>
+  )
+}
+
+const RenderArticles = ({articles, from ,to}) => {
+  return(
+    articles.slice(from, to).map((article, index) => <RenderArticle article={article} /> )
 
   )
 }
@@ -40,8 +48,11 @@ class TopHeadlines extends React.Component {
     return(
       <div>
         <h2 className={s.heading}>Top Headlines</h2>
-        <section className={s.wrapper}>
-          <RenderGrid articles={this.state.articles} />
+        <section className={s.articles}>
+          <RenderArticles articles={this.state.articles} from={1} to={2} />
+        </section>
+        <section className={s.articles}>
+          <RenderArticles articles={this.state.articles} from={2} to={5} />
         </section>
       </div>
     )
