@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-gap: 25px;
+  margin: 25px 0;
+}
+
+.module {
+
+}
