@@ -11,6 +11,9 @@
   overflow: hidden;
   max-height: 400px;
 }
+.imageHolder img {
+  width: 100%;
+}
 
 .imgUrl {
 }
