@@ -1,4 +1,6 @@
 import React from 'react';
+import dateFns from 'date-fns';
+import TopArticle from './top-article/top-article'
 import s from './top-headlines.module.css';
 
 const RenderArticle = ({ article }) => {
@@ -15,16 +17,21 @@ const RenderArticle = ({ article }) => {
         </h3>
         <div className={s.meta}>
           by <a href={authorUrl} target="_blank" className={s.author}>{article.source.name}</a>
-          <span className={s.timestamp}>221</span>
+          <span className={s.timestamp}>{dateFns.format(article.publishedAt, 'MMM DD, YYYY')}</span>
         </div>
       </div>
     </article>
   )
 }
 
-const RenderArticles = ({articles, from ,to}) => {
+const RenderArticles = ({articles, from ,to, type}) => {
   return(
-    articles.slice(from, to).map((article, index) => <RenderArticle article={article} /> )
+    articles.slice(from, to).map((article, index) => {
+      if(type === 'top') {
+        return <TopArticle article={article} />
+      }
+      return <RenderArticle article={article} />
+    })
 
   )
 }
@@ -48,14 +55,13 @@ class TopHeadlines extends React.Component {
 
   render() {
     return(
-      <div>
-        <h2 className={s.heading}>Top Headlines</h2>
-        <section className={s.articles}>
-          <RenderArticles articles={this.state.articles} from={1} to={2} />
-        </section>
+      <div className={s.container}>
         <section className={s.articles}>
           <RenderArticles articles={this.state.articles} from={2} to={5} />
         </section>
+          <section className={s.topArticle}>
+            <RenderArticles type="top" articles={this.state.articles} from={1} to={2} />
+          </section>
       </div>
     )
   }

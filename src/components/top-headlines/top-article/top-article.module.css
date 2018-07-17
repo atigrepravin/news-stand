@@ -1,42 +1,18 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10px;
-  margin: 25px 0;
-}
-.articles {
-  display: grid;
-  grid-row-gap: 10px;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
 .article {
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
   background: #fff;
   display: flex;
+  flex-direction: column;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .imageHolder {
-  position: relative;
-  flex: 0 0 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.article:nth-child(even) .imageHolder {
-  order: 2;
+  overflow: hidden;
+  max-height: 400px;
 }
 
-.imageHolder img {
-  display: none;
-}
 .imgUrl {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .content {
@@ -45,7 +21,7 @@
 
 .title {
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #171821;
   font-weight: 600;
   line-height: 1.3;
@@ -55,7 +31,6 @@
 .title a {
   color: inherit;
 }
-
 .meta {
   font-size: 0.750rem;
   font-weight: 600;
