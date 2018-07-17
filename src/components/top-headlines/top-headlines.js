@@ -6,13 +6,15 @@ const RenderArticle = ({ article }) => {
   return(
     <article className={s.article}>
       <figure className={s.imageHolder} style={{backgroundImage: `url(${article.urlToImage})`}}>
-        <a href="#" className={s.imgUrl}></a>
+        <a target="_blank" href={article.url} className={s.imgUrl}></a>
         <img src={article.urlToImage} alt={article.title} />
       </figure>
       <div className={s.content}>
-        <h3 className={s.title}>{article.title}</h3>
+        <h3 className={s.title}>
+        <a target="_blank" href={article.url}>{article.title}</a>
+        </h3>
         <div className={s.meta}>
-          by <a href={authorUrl} target="_blank" className={s.author}>{article.author}</a>
+          by <a href={authorUrl} target="_blank" className={s.author}>{article.source.name}</a>
           <span className={s.timestamp}>221</span>
         </div>
       </div>
@@ -36,7 +38,7 @@ class TopHeadlines extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=39545b21966344e38ae35fc16711d6e7')
+    fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=39545b21966344e38ae35fc16711d6e7')
       .then(res => res.json())
       .then(res => {
         console.log('res', res)
