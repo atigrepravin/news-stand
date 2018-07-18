@@ -45,7 +45,7 @@ class TopHeadlines extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=39545b21966344e38ae35fc16711d6e7')
+    fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=39545b21966344e38ae35fc16711d6e7')
       .then(res => res.json())
       .then(res => {
         console.log('res', res)
@@ -67,4 +67,4 @@ class TopHeadlines extends React.Component {
   }
 }
 
-export { TopHeadlines };
+export default TopHeadlines;

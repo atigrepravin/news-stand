@@ -10,6 +10,7 @@
 .imageHolder {
   overflow: hidden;
   max-height: 400px;
+  min-height: 300px;
 }
 .imageHolder img {
   width: 100%;
