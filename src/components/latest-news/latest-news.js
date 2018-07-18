@@ -1,30 +1,37 @@
 import React from 'react';
+import Head from './head/head';
+import ArticleList from './article-list/article-list';
 import s from './latest-news.module.css';
 
-const LatestNews = () => (
-  <div className={s.container}>
-    <div className={s.head}>
-      <h4 className={s.headline}>Latest News</h4>
-      <ul className={s.navlist}>
-        <li className={s.listItem}>
-          <a href="#" className={s.listLink}>All</a>
-        </li>
-        <li className={s.listItem}>
-          <a href="#" className={s.listLink}>World</a>
-        </li>
-        <li className={s.listItem}>
-          <a href="#" className={s.listLink}>Lifestyle</a>
-        </li>
-        <li className={s.listItem}>
-          <a href="#" className={s.listLink}>Business</a>
-        </li>
-        <li className={s.listItem}>
-          <a href="#" className={s.listLink}>Fashion</a>
-        </li>
-      </ul>
-    </div>
-    <div className={s.content}></div>
-  </div>
-)
 
-export default LatestNews
+class LatestNews extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      articles: []
+    }
+  }
+
+  componentDidMount() {
+    fetch('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=39545b21966344e38ae35fc16711d6e7')
+      .then(res => res.json())
+      .then(res => {
+        console.log('res', res)
+        this.setState( { articles: res.articles})
+      });
+  }
+
+  render() {
+    return(
+      <div className={s.container}>
+        <Head />
+        <div className={s.content}>
+          <ArticleList articles={this.state.articles} />
+        </div>
+      </div>
+    )
+  }
+}
+
+
+export default LatestNews;

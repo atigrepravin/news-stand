@@ -2,35 +2,6 @@
   border-top: 3px solid #888994;
 }
 
-.head {
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  align-items: center;
-}
-
-.headline {
-  font-family: "Montserrat", sans-serif;
-  font-size: 21px;
-  color: #171821;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-weight: 700;
-  margin: 0;
-}
-
-.navlist {
-  display: flex;
-}
-
-.listItem {
-  margin: 0 10px;
-}
-
-.listLink {
-  color: #000;
-}
-
 .content {
 
 }
