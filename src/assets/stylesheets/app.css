@@ -33,6 +33,6 @@ body {
 }
 
 .app-container {
-  max-width: 95%;
-  margin: auto;
+  max-width: 760px;
+  margin: 90px 0 30px 280px
 }

@@ -6,7 +6,6 @@ import s from './home.module.css';
 
 const Home = () => (
   <div className={s.container}>
-    <div class="sidepane"></div>
     <div>
       <TopHeadlines />
       {/*

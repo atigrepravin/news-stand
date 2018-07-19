@@ -9,12 +9,14 @@ const Articles = ({ articles }) => {
       const authorUrl = `//${new URL(article.url).hostname}`;
       return(
         <article className={s.article}>
-          {article.urlToImage && (
-            <figure className={s.imageHolder}>
-              <a target="_blank" href={article.url} className={s.imgUrl}></a>
-              <img src={article.urlToImage} />
-            </figure>
-          )}
+          {/*
+            {article.urlToImage && (
+              <figure className={s.imageHolder}>
+                <a target="_blank" href={article.url} className={s.imgUrl}></a>
+                <img src={article.urlToImage} />
+              </figure>
+            )}
+          */}
           <div className={s.content}>
             <h3 className={s.title}>
               <a target="_blank" href={article.url}>{article.title}</a>

@@ -4,12 +4,12 @@ import s from './navbar.module.css';
 
 const Navbar = () => (
   <div className={s.navbar}>
-    <div className={`app-container ${s.container}`}>
+    <div className={s.container}>
       <div className={s.navbarLeft}>
         <h2 className={s.logoWrapper}>
-        <Link to="/" className={s.logo}>News Stand</Link>
+          <Link to="/" className={s.logo}>News Stand</Link>
         </h2>
-        <nav className={s.menu}>
+        {/*<nav className={s.menu}>
           <ul className={s.menuList}>
             <li className={s.listItem}>
               <Link className={s.listLink} to="/">Home</Link>
@@ -21,7 +21,7 @@ const Navbar = () => (
               <Link className={s.listLink} to="/contact">Contact</Link>
             </li>
           </ul>
-        </nav>
+        </nav>*/}
       </div>
       <div className={s.navbarRight}></div>
     </div>

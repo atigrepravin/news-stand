@@ -1,0 +1,21 @@
+.container {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  height: 100%;
+  width: 250px;
+}
+
+.menuList {
+margin: 40px 0;
+}
+
+.listItem {
+  font-size: 1rem;
+  color: #444;
+  padding: 10px 30px;
+}
+
+.listItem a {
+  color: inherit;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Sidepane from "../components/sidepane/sidepane";
 import { Header } from "../components/header/header";
 import { Home } from "../pages/home/home";
 import { About } from "../pages/about";
@@ -9,6 +10,7 @@ const Routes = () => (
   <Router>
     <React.Fragment>
       <Header />
+      <Sidepane />
       <div className="app-container">
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />

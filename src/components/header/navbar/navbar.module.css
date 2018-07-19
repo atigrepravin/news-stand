@@ -1,5 +1,14 @@
 .navbar {
   border-bottom: 1px solid #ddd;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 50px;
+  display: flex;
+  height: 60px;
+  align-items: center;
 }
 
 .container {
