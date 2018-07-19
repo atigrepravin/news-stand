@@ -6,15 +6,21 @@ import s from './home.module.css';
 
 const Home = () => (
   <div className={s.container}>
-    <TopHeadlines />
-    <div className={s.LatestNews__popularPost}>
-      <div>
-        <LatestNews />
+    <div class="sidepane"></div>
+    <div>
+      <TopHeadlines />
+      {/*
+        <div className={s.LatestNews__popularPost}>
+        <div>
+          <LatestNews />
+        </div>
+        <div>
+          <PopulrPosts />
+        </div>
       </div>
-      <div>
-        <PopulrPosts />
-      </div>
+    */}
     </div>
+    <div class="sidebar"></div>
   </div>
 )
 

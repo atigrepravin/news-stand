@@ -29,10 +29,10 @@ body {
   font-size: 16px;
   color: #54555E;
   -webkit-font-smoothing: antialiased;
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 
 .app-container {
-  max-width: 1248px;
+  max-width: 95%;
   margin: auto;
 }

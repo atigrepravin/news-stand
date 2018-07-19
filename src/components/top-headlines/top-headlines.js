@@ -1,6 +1,7 @@
 import React from 'react';
 import dateFns from 'date-fns';
 import TopArticle from './top-article/top-article'
+import NewsBox from '../news-box/news-box'
 import s from './top-headlines.module.css';
 
 const RenderArticle = ({ article }) => {
@@ -55,14 +56,7 @@ class TopHeadlines extends React.Component {
 
   render() {
     return(
-      <div className={s.container}>
-        <section className={s.articles}>
-          <RenderArticles articles={this.state.articles} from={2} to={5} />
-        </section>
-          <section className={s.topArticle}>
-            <RenderArticles type="top" articles={this.state.articles} from={1} to={2} />
-          </section>
-      </div>
+      <NewsBox heading="Top Headlines" articles={this.state.articles} />
     )
   }
 }
