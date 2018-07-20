@@ -1,0 +1,49 @@
+.article {
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.imageHolder {
+  overflow: hidden;
+  max-height: 400px;
+  min-height: 300px;
+}
+.imageHolder img {
+  width: 100%;
+}
+
+.content {
+  padding: 24px 32px;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: #171821;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  margin: 0 0 10px;
+}
+.title a {
+  color: inherit;
+}
+.meta {
+  font-size: 0.750rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #83858F;
+}
+
+.author {
+  color: #2D95E3;
+}
+.author:after {
+  content: '-';
+  display: inline-block;
+  margin: 0 3px;
+}
