@@ -1,41 +1,7 @@
 import React from 'react';
-import dateFns from 'date-fns';
-import TopArticle from './top-article/top-article'
 import NewsBox from '../news-box/news-box'
-import s from './top-headlines.module.css';
-
-const RenderArticle = ({ article }) => {
-  const authorUrl = `//${new URL(article.url).hostname}`;
-  return(
-    <article className={s.article}>
-      <figure className={s.imageHolder} style={{backgroundImage: `url(${article.urlToImage})`}}>
-        <a target="_blank" href={article.url} className={s.imgUrl}></a>
-        <img src={article.urlToImage} alt={article.title} />
-      </figure>
-      <div className={s.content}>
-        <h3 className={s.title}>
-        <a target="_blank" href={article.url}>{article.title}</a>
-        </h3>
-        <div className={s.meta}>
-          by <a href={authorUrl} target="_blank" className={s.author}>{article.source.name}</a>
-          <span className={s.timestamp}>{dateFns.format(article.publishedAt, 'MMM DD, YYYY')}</span>
-        </div>
-      </div>
-    </article>
-  )
-}
-
-const RenderArticles = ({articles, from ,to, type}) => {
-  return(
-    articles.slice(from, to).map((article, index) => {
-      if(type === 'top') {
-        return <TopArticle article={article} />
-      }
-      return <RenderArticle article={article} />
-    })
-
-  )
-}
+import WithQuery from 'with-query';
+import NewsApi from '../../server/newsapi';
 
 class TopHeadlines extends React.Component {
   constructor(props) {
@@ -46,16 +12,15 @@ class TopHeadlines extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=39545b21966344e38ae35fc16711d6e7')
-      .then(res => res.json())
-      .then(res => {
-        console.log('res', res)
-        this.setState( { articles: res.articles})
-      });
+    NewsApi.topHeadlines({
+      'country': 'in'
+    }).then(response => {
+      this.setState({ articles: response.articles })
+    });
   }
 
   render() {
-    return(
+    return (
       <NewsBox heading="Top Headlines" articles={this.state.articles} />
     )
   }
