@@ -6,6 +6,7 @@ import { Header } from "../components/header/header";
 import { Home } from "../pages/home/home";
 import { About } from "../pages/about";
 import { Contact } from "../pages/contact";
+import Search from "../pages/search/search";
 
 const Routes = () => (
   <Router>
@@ -16,6 +17,7 @@ const Routes = () => (
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/Search" component={Search} />
     </div>
     <FilterPole />
     </React.Fragment>

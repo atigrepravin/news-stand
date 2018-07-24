@@ -1,9 +1,11 @@
 import React from 'react';
-import NewsBox from '../news-box/news-box'
+import NewsBox from '../../components/news-box/news-box'
 import WithQuery from 'with-query';
 import NewsApi from '../../server/newsapi';
+const queryString = require('query-string');
 
-class TopHeadlines extends React.Component {
+
+class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,8 +14,12 @@ class TopHeadlines extends React.Component {
   }
 
   componentDidMount() {
-    NewsApi.topHeadlines({
-      'country': 'in'
+    const parsedString = queryString.parse(this.props.location.search);
+    this.props.location
+
+    NewsApi.everything({
+      q: parsedString.q,
+      sortBy: 'popularity'
     }).then(response => {
       this.setState({ articles: response.articles })
     });
@@ -27,4 +33,4 @@ class TopHeadlines extends React.Component {
   }
 }
 
-export default TopHeadlines;
+export default Search;
