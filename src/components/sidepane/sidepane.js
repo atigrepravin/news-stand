@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import s from './sidepane.module.css';
 
 
@@ -8,16 +8,16 @@ const Sidepane = () => (
     <div className={s.body}>
     <ul className={s.menuList}>
       <li className={s.listItem}>
-        <Link className={s.listLink} to="/">Top Headlines</Link>
+        <NavLink className={s.listLink} exact activeClassName={s.active} to="/">Top Headlines</NavLink>
       </li>
       <li className={s.listItem}>
-        <Link className={s.listLink} to="/about">Buisness</Link>
+        <NavLink className={s.listLink} activeClassName={s.active} to="/about">About</NavLink>
       </li>
       <li className={s.listItem}>
-        <Link className={s.listLink} to="/contact">Technology</Link>
+        <NavLink className={s.listLink} activeClassName={s.active}  to="/contact">Contact</NavLink>
       </li>
       <li className={s.listItem}>
-        <Link className={s.listLink} to={{ pathname: '/search', search: 'q=adf ad smodi in america'}}>Search</Link>
+        <NavLink className={s.listLink} activeClassName={s.active} to={{ pathname: '/search', search: 'q=adf ad smodi in america'}}>Search</NavLink>
       </li>
       <li className={s.listItem}>
         <a href="#">Entertainment</a>

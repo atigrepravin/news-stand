@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+}
+
+.listItem {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.listItem:last-child {
+  margin-right: 0;
+}

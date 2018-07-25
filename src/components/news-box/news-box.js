@@ -1,5 +1,5 @@
 import React from 'react';
-import dateFns from 'date-fns';
+import dateFormat from 'date-fns/format';
 import { truncate } from '../utils';
 import s from './news-box.module.css';
 
@@ -8,7 +8,7 @@ const Articles = ({ articles }) => {
     articles.map((article, index) => {
       const authorUrl = `//${new URL(article.url).hostname}`;
       return(
-        <article key={`${article.source.name}-${index}`} className={s.article}>          
+        <article key={`${article.source.name}-${index}`} className={s.article}>
           {article.urlToImage && (
             <figure className={s.imageHolder}>
               <a target="_blank" href={article.url} className={s.imgUrl}></a>
@@ -25,7 +25,7 @@ const Articles = ({ articles }) => {
             )}
             <div className={s.meta}>
               by <a href={authorUrl} target="_blank" className={s.author}>{article.source.name}</a>
-              <span className={s.timestamp}>{dateFns.format(article.publishedAt, 'MMM DD, YYYY')}</span>
+              <span className={s.timestamp}>{dateFormat(article.publishedAt, 'MMM DD, YYYY')}</span>
             </div>
           </div>
         </article>
@@ -38,7 +38,10 @@ const NewsBox = ({ heading, articles }) => (
   <section className={s.container}>
     <h2 className={s.heading}>{heading}</h2>
     <div className={s.articles}>
-      <Articles articles={articles} />
+      { articles.length ?
+        <Articles articles={articles} /> : (
+        <div>No results found.</div>
+      )}
     </div>
   </section>
 )

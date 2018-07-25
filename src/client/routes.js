@@ -17,9 +17,9 @@ const Routes = () => (
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/Search" component={Search} />
+        <Route exact={true} path="/Search" component={Search} />
     </div>
-    <FilterPole />
+    {/*<FilterPole />*/}
     </React.Fragment>
   </Router>
 )

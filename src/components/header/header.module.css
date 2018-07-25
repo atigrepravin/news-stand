@@ -7,7 +7,8 @@
   background-color: #fff;
   padding: 0 50px;
   display: flex;
-  height: 60px;
+  height: 70px;
+  justify-content: space-between;
   align-items: center;
   z-index: 99;
 }
@@ -23,10 +24,4 @@
 
 .logo {
   color: #171821;
-}
-
-.headerLeft {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }

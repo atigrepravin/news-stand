@@ -20,10 +20,7 @@ class TopHeadlines extends React.Component {
   }
 
   render() {
-    if(this.state.articles) return <NewsBox heading="Search Results" articles={this.state.articles} />
-    return (
-      <div>No results found.</div>
-    )
+    return <NewsBox heading="Top Headlines" articles={this.state.articles} />
   }
 }
 

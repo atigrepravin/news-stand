@@ -1,9 +1,8 @@
 import React from 'react';
-import NewsBox from '../../components/news-box/news-box'
 import WithQuery from 'with-query';
+import queryString from 'query-string';
+import NewsBox from '../../components/news-box/news-box'
 import NewsApi from '../../server/newsapi';
-const queryString = require('query-string');
-
 
 class Search extends React.Component {
   constructor(props) {
@@ -13,23 +12,33 @@ class Search extends React.Component {
     }
   }
 
-  componentDidMount() {
-    const parsedString = queryString.parse(this.props.location.search);
-    this.props.location
-
-    NewsApi.everything({
-      q: parsedString.q,
-      sortBy: 'popularity'
-    }).then(response => {
-      this.setState({ articles: response.articles })
+  fetchArticles = (query) => {
+    NewsApi.topHeadlines({
+      q: query
+    }).then(headelinesResponse => {
+        NewsApi.everything({
+          q: query,
+          sortBy: 'relevancy'
+        }).then(everythingResponse => {
+          this.setState({ articles: headelinesResponse.articles.concat(everythingResponse.articles) })
+        });
     });
   }
 
+  componentDidMount() {
+    let parsedString = queryString.parse(this.props.location.search).q;
+    this.fetchArticles(parsedString);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(this.props.location.search !== nextProps.location.search) {
+      let parsedString = queryString.parse(nextProps.location.search).q;
+      this.fetchArticles(parsedString);
+    }
+  }
+
   render() {
-    if(this.state.articles) return <NewsBox heading="Search Results" articles={this.state.articles} />
-    return (
-      <div>No results found.</div>
-    )
+    return <NewsBox heading="Search results" articles={this.state.articles} />
   }
 }
 
