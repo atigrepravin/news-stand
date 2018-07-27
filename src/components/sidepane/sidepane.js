@@ -16,12 +16,9 @@ const Sidepane = () => (
       <li className={s.listItem}>
         <NavLink className={s.listLink} activeClassName={s.active}  to="/contact">Contact</NavLink>
       </li>
-      <li className={s.listItem}>
-        <NavLink className={s.listLink} activeClassName={s.active} to={{ pathname: '/search', search: 'q=adf ad smodi in america'}}>Search</NavLink>
-      </li>
-      <li className={s.listItem}>
-        <a href="#">Entertainment</a>
-      </li>
+      {/*<li className={s.listItem}>
+        <NavLink className={s.listLink} activeClassName={s.active} to={{ pathname: '/search', search: 'q=indian stock market'}}>Market</NavLink>
+      </li>*/}
     </ul>
     </div>
   </div>

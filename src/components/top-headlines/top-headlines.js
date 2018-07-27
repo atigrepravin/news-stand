@@ -7,7 +7,8 @@ class TopHeadlines extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: []
+      articles: [],
+      isLoading: true
     }
   }
 
@@ -16,11 +17,14 @@ class TopHeadlines extends React.Component {
       'country': 'in'
     }).then(response => {
       this.setState({ articles: response.articles })
-    });
+    })
+    .finally(() => this.setState({
+      isLoading: false
+    }));
   }
 
   render() {
-    return <NewsBox heading="Top Headlines" articles={this.state.articles} />
+    return <NewsBox heading="Top Headlines" articles={this.state.articles} isLoading={this.state.isLoading} />
   }
 }
 

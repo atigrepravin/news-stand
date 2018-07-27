@@ -34,14 +34,15 @@ const Articles = ({ articles }) => {
   )
 }
 
-const NewsBox = ({ heading, articles }) => (
+const NewsBox = ({ heading, articles, isLoading }) => (
   <section className={s.container}>
     <h2 className={s.heading}>{heading}</h2>
     <div className={s.articles}>
-      { articles.length ?
-        <Articles articles={articles} /> : (
-        <div>No results found.</div>
+      {isLoading && (
+        <div className={s.loader}>Loading...</div>
       )}
+      {!isLoading && !articles.length && ( <div>No results found.</div> )}
+      <Articles articles={articles} />
     </div>
   </section>
 )

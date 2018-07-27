@@ -8,7 +8,8 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: []
+      articles: [],
+      isLoading: true
     }
   }
 
@@ -21,7 +22,10 @@ class Search extends React.Component {
           sortBy: 'relevancy'
         }).then(everythingResponse => {
           this.setState({ articles: headelinesResponse.articles.concat(everythingResponse.articles) })
-        });
+        })
+        .finally(() => this.setState({
+          isLoading: false
+        }));
     });
   }
 
@@ -38,7 +42,7 @@ class Search extends React.Component {
   }
 
   render() {
-    return <NewsBox heading="Search results" articles={this.state.articles} />
+    return <NewsBox heading="Search results" articles={this.state.articles} isLoading={this.state.isLoading} />
   }
 }
 

@@ -10,3 +10,7 @@
 .listItem:last-child {
   margin-right: 0;
 }
+
+.listItem:hover {
+  background-color: #f1f1f1;
+}
