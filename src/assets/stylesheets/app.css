@@ -36,8 +36,8 @@ body {
 }
 
 .app-container {
-  max-width: 760px;
-  margin: 100px 0 30px 280px
+  /* max-width: 760px; */
+  margin: 100px 30px 30px;
 }
 
 /* icono icon libraray */
