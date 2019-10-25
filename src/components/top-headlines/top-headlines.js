@@ -1,7 +1,7 @@
 import React from 'react';
 import NewsBox from '../news-box/news-box'
-import WithQuery from 'with-query';
 import NewsApi from '../../server/newsapi';
+import s from './top-headlines.module.css';
 
 class TopHeadlines extends React.Component {
   constructor(props) {
@@ -55,23 +55,23 @@ class TopHeadlines extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.filterBycategory("business")}>
+        <button className={s.button} onClick={() => this.filterBycategory("business")}>
           Business
         </button>{" "}
         &nbsp;
-        <button onClick={() => this.filterBycategory("entertainment")}>
+        <button className={s.button} onClick={() => this.filterBycategory("entertainment")}>
           Entertainment
         </button>{" "}
         &nbsp;
-        <button onClick={() => this.filterBycategory("technology")}>
+        <button className={s.button} onClick={() => this.filterBycategory("technology")}>
           Technology
         </button>{" "}
         &nbsp;
-        <button onClick={() => this.filterBycategory("sports")}>
+        <button className={s.button} onClick={() => this.filterBycategory("sports")}>
           Sports
         </button>{" "}
         &nbsp;
-        <button onClick={() => this.filterBycategory("health")}>
+        <button className={s.button} onClick={() => this.filterBycategory("health")}>
           Health
         </button>{" "}
         Total results: {this.state.totalResults}

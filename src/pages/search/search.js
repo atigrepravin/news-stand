@@ -1,5 +1,4 @@
 import React from 'react';
-import WithQuery from 'with-query';
 import queryString from 'query-string';
 import NewsBox from '../../components/news-box/news-box'
 import NewsApi from '../../server/newsapi';
