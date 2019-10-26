@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render story 1`] = `
+<section>
+  <h2
+    className="heading"
+  >
+    Top Headlines
+  </h2>
+  <div
+    className="articles"
+  >
+    <article
+      className="article"
+    >
+      <figure
+        className="imageHolder"
+      >
+        <a
+          href="http://timesofindia.indiatimes.com/business/india-business/ril-to-restructure-jio-look-for-investors/articleshow/71769767.cms"
+          target="_blank"
+        >
+          <img
+            src="https://static.toiimg.com/thumb/msid-71770829,width-1070,height-580,imgsize-162969,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+          />
+        </a>
+      </figure>
+      <div
+        className="content"
+      >
+        <h3
+          className="title"
+        >
+          <a
+            href="http://timesofindia.indiatimes.com/business/india-business/ril-to-restructure-jio-look-for-investors/articleshow/71769767.cms"
+            target="_blank"
+          >
+            Reliance Industries to restructure Jio, look for investors - Times of India
+          </a>
+        </h3>
+        <div
+          className="description"
+        >
+          <a
+            href="http://timesofindia.indiatimes.com/business/india-business/ril-to-restructure-jio-look-for-investors/articleshow/71769767.cms"
+            target="_blank"
+          >
+            India Business News: Mukesh Ambani’s RIL on Friday announced a restructuring of its digital and telecom business, including Jio, through a multi-step process as it readies
+          </a>
+        </div>
+        <div
+          className="meta"
+        >
+          by
+           
+          <a
+            className="author"
+            href="//timesofindia.indiatimes.com"
+            target="_blank"
+          >
+            The Times of India
+          </a>
+          <span
+            className="timestamp"
+          >
+            Oct 26, 2019
+          </span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+`;

@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Article/> should render an article 1`] = `
+<article
+  className="article"
+>
+  <figure
+    className="imageHolder"
+  >
+    <a
+      href="https://www.asianage.com/life/health/261019/consuming-low-salt-can-keep-dementia-way.html"
+      target="_blank"
+    >
+      <img
+        src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-1md2vcqecn2d58pku3nt05spm4-20191026130151.jpeg"
+      />
+    </a>
+  </figure>
+  <div
+    className="content"
+  >
+    <h3
+      className="title"
+    >
+      <a
+        href="https://www.asianage.com/life/health/261019/consuming-low-salt-can-keep-dementia-way.html"
+        target="_blank"
+      >
+        Consuming low salt can keep dementia way - The Asian Age
+      </a>
+    </h3>
+    <div
+      className="description"
+    >
+      <a
+        href="https://www.asianage.com/life/health/261019/consuming-low-salt-can-keep-dementia-way.html"
+        target="_blank"
+      >
+        Studies reveal that low-salt diet can stave off dementia.
+      </a>
+    </div>
+    <div
+      className="meta"
+    >
+      by
+       
+      <a
+        className="author"
+        href="https://www.asianage.com"
+        target="_blank"
+      >
+        Asianage.com
+      </a>
+      <span
+        className="timestamp"
+      >
+        Oct 26, 2019
+      </span>
+    </div>
+  </div>
+</article>
+`;

@@ -1,0 +1,368 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArticleList isLoading={true}/> should not render any article 1`] = `
+<div
+  className="articles"
+>
+  <div
+    className="loader"
+  >
+    Loading...
+  </div>
+  <article
+    className="article"
+  >
+    <figure
+      className="imageHolder"
+    >
+      <a
+        href="https://www.indiatoday.in/technology/news/story/from-today-you-can-buy-oneplus-7t-for-as-low-as-rs-32-499-but-for-limited-time-here-is-how-1613124-2019-10-26"
+        target="_blank"
+      >
+        <img
+          src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201910/oneplus_7t-647x363.png?U1LzNdY28r_ou5wtAJR1.7nPL4MCYPMH"
+        />
+      </a>
+    </figure>
+    <div
+      className="content"
+    >
+      <h3
+        className="title"
+      >
+        <a
+          href="https://www.indiatoday.in/technology/news/story/from-today-you-can-buy-oneplus-7t-for-as-low-as-rs-32-499-but-for-limited-time-here-is-how-1613124-2019-10-26"
+          target="_blank"
+        >
+          From today you can buy OnePlus 7T for as low as Rs 32,499, but for limited time: Here is how - India Today
+        </a>
+      </h3>
+      <div
+        className="description"
+      >
+        <a
+          href="https://www.indiatoday.in/technology/news/story/from-today-you-can-buy-oneplus-7t-for-as-low-as-rs-32-499-but-for-limited-time-here-is-how-1613124-2019-10-26"
+          target="_blank"
+        >
+          The OnePlus 7T and OnePlus 7T Pro are two of the best Android phones you can buy this year. And now, as a part of a limited period offer, Indian buyers can get up to Rs 8,000 discount on a brand ne...
+        </a>
+      </div>
+      <div
+        className="meta"
+      >
+        by
+         
+        <a
+          className="author"
+          href="//www.indiatoday.in"
+          target="_blank"
+        >
+          Indiatoday.in
+        </a>
+        <span
+          className="timestamp"
+        >
+          Oct 26, 2019
+        </span>
+      </div>
+    </div>
+  </article>
+  <article
+    className="article"
+  >
+    <figure
+      className="imageHolder"
+    >
+      <a
+        href="https://www.gsmarena.com/huawei_nova_6_5g_could_be_on_the_way_with_dual_punchhole_selfie_cam-news-39825.php"
+        target="_blank"
+      >
+        <img
+          src="https://fdn.gsmarena.com/imgroot/news/19/10/huawei-nova-6-5g-render/-476x249w4/gsmarena_001.jpg"
+        />
+      </a>
+    </figure>
+    <div
+      className="content"
+    >
+      <h3
+        className="title"
+      >
+        <a
+          href="https://www.gsmarena.com/huawei_nova_6_5g_could_be_on_the_way_with_dual_punchhole_selfie_cam-news-39825.php"
+          target="_blank"
+        >
+          Huawei nova 6 5G could be on the way, has a dual punch-hole selfie cam - GSMArena.com news - GSMArena.com
+        </a>
+      </h3>
+      <div
+        className="description"
+      >
+        <a
+          href="https://www.gsmarena.com/huawei_nova_6_5g_could_be_on_the_way_with_dual_punchhole_selfie_cam-news-39825.php"
+          target="_blank"
+        >
+          A triple camera is on the back joined by what appears to be a ToF module, fingerprint reader's on the side.
+        </a>
+      </div>
+      <div
+        className="meta"
+      >
+        by
+         
+        <a
+          className="author"
+          href="//www.gsmarena.com"
+          target="_blank"
+        >
+          Gsmarena.com
+        </a>
+        <span
+          className="timestamp"
+        >
+          Oct 26, 2019
+        </span>
+      </div>
+    </div>
+  </article>
+  <article
+    className="article"
+  >
+    <figure
+      className="imageHolder"
+    >
+      <a
+        href="https://www.hindustantimes.com/tech/flipkart-festive-bonanza-xiaomi-poco-f1-samsung-galaxy-s9-google-pixel-3-available-with-huge-discounts/story-ExIbqjjTZs6UdwGO3IRzNI.html"
+        target="_blank"
+      >
+        <img
+          src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/10/26/Pictures/_4877348a-f7cb-11e9-800c-f2f87dfa36aa.jpg"
+        />
+      </a>
+    </figure>
+    <div
+      className="content"
+    >
+      <h3
+        className="title"
+      >
+        <a
+          href="https://www.hindustantimes.com/tech/flipkart-festive-bonanza-xiaomi-poco-f1-samsung-galaxy-s9-google-pixel-3-available-with-huge-discounts/story-ExIbqjjTZs6UdwGO3IRzNI.html"
+          target="_blank"
+        >
+          Flipkart Festive Bonanza: Xiaomi Poco F1, Samsung Galaxy S9, Google Pixel 3 available with huge dis... - Hindustan Times
+        </a>
+      </h3>
+      <div
+        className="description"
+      >
+        <a
+          href="https://www.hindustantimes.com/tech/flipkart-festive-bonanza-xiaomi-poco-f1-samsung-galaxy-s9-google-pixel-3-available-with-huge-discounts/story-ExIbqjjTZs6UdwGO3IRzNI.html"
+          target="_blank"
+        >
+          Flipkart Festive Bonanza is currently live and will continue till October 29. Here are the top deals, offers on smartphones.
+        </a>
+      </div>
+      <div
+        className="meta"
+      >
+        by
+         
+        <a
+          className="author"
+          href="//www.hindustantimes.com"
+          target="_blank"
+        >
+          Hindustantimes.com
+        </a>
+        <span
+          className="timestamp"
+        >
+          Oct 26, 2019
+        </span>
+      </div>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`<ArticleList/> should render 3 articles 1`] = `
+<div
+  className="articles"
+>
+  <article
+    className="article"
+  >
+    <figure
+      className="imageHolder"
+    >
+      <a
+        href="https://www.indiatoday.in/technology/news/story/from-today-you-can-buy-oneplus-7t-for-as-low-as-rs-32-499-but-for-limited-time-here-is-how-1613124-2019-10-26"
+        target="_blank"
+      >
+        <img
+          src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201910/oneplus_7t-647x363.png?U1LzNdY28r_ou5wtAJR1.7nPL4MCYPMH"
+        />
+      </a>
+    </figure>
+    <div
+      className="content"
+    >
+      <h3
+        className="title"
+      >
+        <a
+          href="https://www.indiatoday.in/technology/news/story/from-today-you-can-buy-oneplus-7t-for-as-low-as-rs-32-499-but-for-limited-time-here-is-how-1613124-2019-10-26"
+          target="_blank"
+        >
+          From today you can buy OnePlus 7T for as low as Rs 32,499, but for limited time: Here is how - India Today
+        </a>
+      </h3>
+      <div
+        className="description"
+      >
+        <a
+          href="https://www.indiatoday.in/technology/news/story/from-today-you-can-buy-oneplus-7t-for-as-low-as-rs-32-499-but-for-limited-time-here-is-how-1613124-2019-10-26"
+          target="_blank"
+        >
+          The OnePlus 7T and OnePlus 7T Pro are two of the best Android phones you can buy this year. And now, as a part of a limited period offer, Indian buyers can get up to Rs 8,000 discount on a brand ne...
+        </a>
+      </div>
+      <div
+        className="meta"
+      >
+        by
+         
+        <a
+          className="author"
+          href="//www.indiatoday.in"
+          target="_blank"
+        >
+          Indiatoday.in
+        </a>
+        <span
+          className="timestamp"
+        >
+          Oct 26, 2019
+        </span>
+      </div>
+    </div>
+  </article>
+  <article
+    className="article"
+  >
+    <figure
+      className="imageHolder"
+    >
+      <a
+        href="https://www.gsmarena.com/huawei_nova_6_5g_could_be_on_the_way_with_dual_punchhole_selfie_cam-news-39825.php"
+        target="_blank"
+      >
+        <img
+          src="https://fdn.gsmarena.com/imgroot/news/19/10/huawei-nova-6-5g-render/-476x249w4/gsmarena_001.jpg"
+        />
+      </a>
+    </figure>
+    <div
+      className="content"
+    >
+      <h3
+        className="title"
+      >
+        <a
+          href="https://www.gsmarena.com/huawei_nova_6_5g_could_be_on_the_way_with_dual_punchhole_selfie_cam-news-39825.php"
+          target="_blank"
+        >
+          Huawei nova 6 5G could be on the way, has a dual punch-hole selfie cam - GSMArena.com news - GSMArena.com
+        </a>
+      </h3>
+      <div
+        className="description"
+      >
+        <a
+          href="https://www.gsmarena.com/huawei_nova_6_5g_could_be_on_the_way_with_dual_punchhole_selfie_cam-news-39825.php"
+          target="_blank"
+        >
+          A triple camera is on the back joined by what appears to be a ToF module, fingerprint reader's on the side.
+        </a>
+      </div>
+      <div
+        className="meta"
+      >
+        by
+         
+        <a
+          className="author"
+          href="//www.gsmarena.com"
+          target="_blank"
+        >
+          Gsmarena.com
+        </a>
+        <span
+          className="timestamp"
+        >
+          Oct 26, 2019
+        </span>
+      </div>
+    </div>
+  </article>
+  <article
+    className="article"
+  >
+    <figure
+      className="imageHolder"
+    >
+      <a
+        href="https://www.hindustantimes.com/tech/flipkart-festive-bonanza-xiaomi-poco-f1-samsung-galaxy-s9-google-pixel-3-available-with-huge-discounts/story-ExIbqjjTZs6UdwGO3IRzNI.html"
+        target="_blank"
+      >
+        <img
+          src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/10/26/Pictures/_4877348a-f7cb-11e9-800c-f2f87dfa36aa.jpg"
+        />
+      </a>
+    </figure>
+    <div
+      className="content"
+    >
+      <h3
+        className="title"
+      >
+        <a
+          href="https://www.hindustantimes.com/tech/flipkart-festive-bonanza-xiaomi-poco-f1-samsung-galaxy-s9-google-pixel-3-available-with-huge-discounts/story-ExIbqjjTZs6UdwGO3IRzNI.html"
+          target="_blank"
+        >
+          Flipkart Festive Bonanza: Xiaomi Poco F1, Samsung Galaxy S9, Google Pixel 3 available with huge dis... - Hindustan Times
+        </a>
+      </h3>
+      <div
+        className="description"
+      >
+        <a
+          href="https://www.hindustantimes.com/tech/flipkart-festive-bonanza-xiaomi-poco-f1-samsung-galaxy-s9-google-pixel-3-available-with-huge-discounts/story-ExIbqjjTZs6UdwGO3IRzNI.html"
+          target="_blank"
+        >
+          Flipkart Festive Bonanza is currently live and will continue till October 29. Here are the top deals, offers on smartphones.
+        </a>
+      </div>
+      <div
+        className="meta"
+      >
+        by
+         
+        <a
+          className="author"
+          href="//www.hindustantimes.com"
+          target="_blank"
+        >
+          Hindustantimes.com
+        </a>
+        <span
+          className="timestamp"
+        >
+          Oct 26, 2019
+        </span>
+      </div>
+    </div>
+  </article>
+</div>
+`;
