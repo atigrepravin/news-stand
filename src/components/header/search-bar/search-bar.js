@@ -1,36 +1,55 @@
 import React from 'react';
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
+import queryString from 'query-string';
 import s from './search-bar.module.css';
-
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       redirect: false,
-      query: ''
-    }
+      queryValue: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
-  submit = (e) => {
+  componentDidMount() {
+    this.setState({
+      queryValue: queryString.parse(this.props.location.search).q
+    });
+  }
+
+  submit = e => {
     e.preventDefault();
-    const value = e.target.elements.query.value;
-    if(value) {
-      let queryString = value;
-      this.props.history.push(`/search?q=${value}`);
+    if (this.state.queryValue) {
+      this.props.history.push(`/search?q=${this.state.queryValue}`);
     }
+  };
+
+  handleChange(e) {
+    this.setState({
+      queryValue: e.target.value
+    });
   }
 
   render() {
-    return(
+    return (
       <div className={s.container}>
-        <form onSubmit={this.submit.bind(this)}>
+        <form onSubmit={this.submit}>
           <div className={s.searchWrapper}>
-            <input className={s.input} type="search" name="query" placeholder="Search News"  />
+            <input
+              className={s.input}
+              type='search'
+              name='query'
+              value={this.state.queryValue}
+              onChange={this.handleChange}
+              placeholder='Search News'
+            />
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
 

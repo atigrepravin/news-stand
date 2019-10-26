@@ -1,7 +1,45 @@
 import React from 'react';
-import NewsBox from '../news-box/news-box'
+import NewsBox from '../news-box/news-box';
 import NewsApi from '../../server/newsapi';
 import s from './top-headlines.module.css';
+
+const categories = [
+  {
+    id: 2,
+    name: 'Business',
+    key: 'business'
+  },
+  {
+    id: 3,
+    name: 'Science',
+    key: 'science'
+  },
+  {
+    id: 4,
+    name: 'Entertainment',
+    key: 'entertainment'
+  },
+  {
+    id: 1,
+    name: 'All',
+    key: ''
+  },
+  {
+    id: 5,
+    name: 'Technology',
+    key: 'technology'
+  },
+  {
+    id: 6,
+    name: 'Sports',
+    key: 'sports'
+  },
+  {
+    id: 7,
+    name: 'Health',
+    key: 'health'
+  }
+];
 
 class TopHeadlines extends React.Component {
   constructor(props) {
@@ -10,8 +48,9 @@ class TopHeadlines extends React.Component {
       articles: [],
       isLoading: true,
       totalResults: 0,
+      activeCategoryId: 1,
       params: {
-        country: "in",
+        country: 'in',
         pageSize: 40
       }
     };
@@ -32,7 +71,7 @@ class TopHeadlines extends React.Component {
           totalResults: response.totalResults
         });
       })
-      .catch(error => console.error("error: ", error))
+      .catch(error => console.error('error: ', error))
       .finally(() =>
         this.setState({
           isLoading: false
@@ -41,47 +80,48 @@ class TopHeadlines extends React.Component {
   }
 
   filterBycategory(category) {
-    this.setState(
-      {
-        params: Object.assign({}, this.state.params, {
-          category: category
-        })
-      },
-      () => this.fetchData()
-    );
-    
+    if (this.state.category !== category.id) {
+      this.setState(
+        {
+          activeCategoryId: category.id,
+          params: Object.assign({}, this.state.params, {
+            category: category.key
+          })
+        },
+        () => this.fetchData()
+      );
+    }
   }
 
   render() {
     return (
-      <div>
-        <button className={s.button} onClick={() => this.filterBycategory("business")}>
-          Business
-        </button>{" "}
-        &nbsp;
-        <button className={s.button} onClick={() => this.filterBycategory("entertainment")}>
-          Entertainment
-        </button>{" "}
-        &nbsp;
-        <button className={s.button} onClick={() => this.filterBycategory("technology")}>
-          Technology
-        </button>{" "}
-        &nbsp;
-        <button className={s.button} onClick={() => this.filterBycategory("sports")}>
-          Sports
-        </button>{" "}
-        &nbsp;
-        <button className={s.button} onClick={() => this.filterBycategory("health")}>
-          Health
-        </button>{" "}
-        Total results: {this.state.totalResults}
-        <p>&nbsp;</p>
+      <React.Fragment>
+        <div className={s.filterButtonsContainer}>
+          <ul className={s.filterButtons}>
+            {categories.map(category => {
+              const buttonClasses =
+                this.state.activeCategoryId === category.id
+                  ? `${s.filterButtonItem} ${s.active}`
+                  : `${s.filterButtonItem}`;
+              return (
+                <li
+                  key={category.id}
+                  onClick={() => this.filterBycategory(category)}
+                  className={buttonClasses}
+                >
+                  {category.name}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
         <NewsBox
-          heading="Top Headlines"
+          heading='Top Headlines'
           articles={this.state.articles}
           isLoading={this.state.isLoading}
         />
-      </div>
+      </React.Fragment>
     );
   }
 }

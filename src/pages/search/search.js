@@ -1,6 +1,6 @@
 import React from 'react';
 import queryString from 'query-string';
-import NewsBox from '../../components/news-box/news-box'
+import NewsBox from '../../components/news-box/news-box';
 import NewsApi from '../../server/newsapi';
 
 class Search extends React.Component {
@@ -9,24 +9,31 @@ class Search extends React.Component {
     this.state = {
       articles: [],
       isLoading: true
-    }
+    };
   }
 
-  fetchArticles = (query) => {
+  fetchArticles = query => {
     NewsApi.topHeadlines({
       q: query
     }).then(headelinesResponse => {
-        NewsApi.everything({
-          q: query,
-          sortBy: 'relevancy'
-        }).then(everythingResponse => {
-          this.setState({ articles: headelinesResponse.articles.concat(everythingResponse.articles) })
+      NewsApi.everything({
+        q: query,
+        sortBy: 'relevancy'
+      })
+        .then(everythingResponse => {
+          this.setState({
+            articles: headelinesResponse.articles.concat(
+              everythingResponse.articles
+            )
+          });
         })
-        .finally(() => this.setState({
-          isLoading: false
-        }));
+        .finally(() =>
+          this.setState({
+            isLoading: false
+          })
+        );
     });
-  }
+  };
 
   componentDidMount() {
     let parsedString = queryString.parse(this.props.location.search).q;
@@ -34,14 +41,19 @@ class Search extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(this.props.location.search !== nextProps.location.search) {
+    if (this.props.location.search !== nextProps.location.search) {
       let parsedString = queryString.parse(nextProps.location.search).q;
       this.fetchArticles(parsedString);
     }
   }
 
   render() {
-    return <NewsBox heading="Search results" articles={this.state.articles} isLoading={this.state.isLoading} />
+    return (
+      <NewsBox
+        articles={this.state.articles}
+        isLoading={this.state.isLoading}
+      />
+    );
   }
 }
 
