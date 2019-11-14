@@ -1,9 +1,10 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import NewsBox from '../news-box';
 
-test('it should render story', () => {
-  const component = renderer.create(
+test('it should render a story', () => {
+  const { container, getByText } = render(
     <NewsBox
       heading='Top Headlines'
       articles={[
@@ -30,6 +31,6 @@ test('it should render story', () => {
     />
   );
 
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(getByText('Top Headlines')).toBeInTheDocument();
+  expect(container.firstChild).toMatchSnapshot();
 });

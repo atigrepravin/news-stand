@@ -1,62 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article/> should render an article 1`] = `
-<article
-  className="article"
->
-  <figure
-    className="imageHolder"
+<div>
+  <article
+    class="article"
   >
-    <a
-      href="https://www.asianage.com/life/health/261019/consuming-low-salt-can-keep-dementia-way.html"
-      target="_blank"
-    >
-      <img
-        src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-1md2vcqecn2d58pku3nt05spm4-20191026130151.jpeg"
-      />
-    </a>
-  </figure>
-  <div
-    className="content"
-  >
-    <h3
-      className="title"
+    <figure
+      class="imageHolder"
     >
       <a
+        target="_blank"
         href="https://www.asianage.com/life/health/261019/consuming-low-salt-can-keep-dementia-way.html"
-        target="_blank"
       >
-        Consuming low salt can keep dementia way - The Asian Age
+        <img
+          src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-1md2vcqecn2d58pku3nt05spm4-20191026130151.jpeg"
+        />
       </a>
-    </h3>
+    </figure>
     <div
-      className="description"
+      class="content"
     >
-      <a
-        href="https://www.asianage.com/life/health/261019/consuming-low-salt-can-keep-dementia-way.html"
-        target="_blank"
+      <h3
+        class="title"
       >
-        Studies reveal that low-salt diet can stave off dementia.
-      </a>
+        <a
+          target="_blank"
+          href="https://www.asianage.com/life/health/261019/consuming-low-salt-can-keep-dementia-way.html"
+        >
+          Consuming low salt can keep dementia way - The Asian Age
+        </a>
+      </h3>
+      <div
+        class="description"
+      >
+        <a
+          target="_blank"
+          href="https://www.asianage.com/life/health/261019/consuming-low-salt-can-keep-dementia-way.html"
+        >
+          Studies reveal that low-salt diet can stave off dementia.
+        </a>
+      </div>
+      <div
+        class="meta"
+      >
+        by
+        <a
+          href="https://www.asianage.com"
+          target="_blank"
+          class="author"
+        >
+          Asianage.com
+        </a>
+        <span
+          class="timestamp"
+        >
+          Oct 26, 2019
+        </span>
+      </div>
     </div>
-    <div
-      className="meta"
-    >
-      by
-       
-      <a
-        className="author"
-        href="https://www.asianage.com"
-        target="_blank"
-      >
-        Asianage.com
-      </a>
-      <span
-        className="timestamp"
-      >
-        Oct 26, 2019
-      </span>
-    </div>
-  </div>
-</article>
+  </article>
+</div>
 `;

@@ -1,20 +1,22 @@
 import React from 'react';
-import { create } from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import ArticleList from '..';
 import { MOCK_ARTICLE_LIST } from '../../../mock-data';
 
-test('<ArticleList/> should render 3 articles', () => {
-  const component = create(
-    <ArticleList articles={MOCK_ARTICLE_LIST} isLoading={false} />
-  );
+describe('<ArticleList/> : ', () => {
+  test('It should render 3 articles', () => {
+    const { container } = render(
+      <ArticleList articles={MOCK_ARTICLE_LIST} isLoading={false} />
+    );
 
-  expect(component.toJSON()).toMatchSnapshot();
-});
+    expect(container).toMatchSnapshot();
+  });
 
-test('<ArticleList isLoading={true}/> should not render any article', () => {
-  const component = create(
-    <ArticleList articles={MOCK_ARTICLE_LIST} isLoading={true} />
-  );
+  test('It should not render any article', () => {
+    const { container } = render(
+      <ArticleList articles={MOCK_ARTICLE_LIST} isLoading={true} />
+    );
 
-  expect(component.toJSON()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
+  });
 });
