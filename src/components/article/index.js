@@ -3,8 +3,8 @@ import dateFormat from 'date-fns/format';
 import { truncate } from '../utils';
 import s from './article.module.css';
 
-const Article = ({ article, authorUrl }) => (
-  <article className={`${s.article} ${s.viewList}`}>
+const Article = ({ article, authorUrl, viewAs }) => (
+  <article className={`${s.article} ${s[viewAs]}`}>
     {article.urlToImage && (
       <figure className={s.imageHolder}>
         <a target='_blank' href={article.url}>

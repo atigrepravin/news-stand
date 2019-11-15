@@ -1,24 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Article from '../article';
 import s from './article-list.module.css';
 
-const ArticleList = ({ articles, isLoading }) => {
-  return (
-    <section className={`${s.articles} ${s.viewList}`}>
-      {isLoading && <div className={s.loader}>Loading...</div>}
-      {!isLoading && !articles.length && <div>No results found.</div>}
-      {articles.map((article, index) => {
-        const authorUrl = `//${new URL(article.url).hostname}`;
-        return (
-          <Article
-            article={article}
-            authorUrl={authorUrl}
-            key={`${article.source.name}-${index}`}
-          />
-        );
-      })}
-    </section>
-  );
-};
+const ArticleList = ({ articles, isLoading, viewAs }) => (
+  <section className={`${s.articles} ${s[viewAs]}`}>
+    {isLoading && <div className={s.loader}>Loading...</div>}
+    {!isLoading && !articles.length && <div>No results found.</div>}
+    {articles.map((article, index) => {
+      const authorUrl = `//${new URL(article.url).hostname}`;
+      return (
+        <Article
+          article={article}
+          authorUrl={authorUrl}
+          key={`${article.source.name}-${index}`}
+          viewAs={viewAs}
+        />
+      );
+    })}
+  </section>
+);
 
-export default ArticleList;
+const mapStateToProps = state => ({
+  viewAs: state.viewAs
+});
+
+export default connect(mapStateToProps)(ArticleList);
