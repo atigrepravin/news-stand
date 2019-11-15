@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import queryString from 'query-string';
-import s from './search-bar.module.css';
+import SearchBarInput from './search-bar-input';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -35,20 +35,11 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className={s.container}>
-        <form onSubmit={this.submit}>
-          <div className={s.searchWrapper}>
-            <input
-              className={s.input}
-              type='search'
-              name='query'
-              value={this.state.queryValue}
-              onChange={this.handleChange}
-              placeholder='Search News'
-            />
-          </div>
-        </form>
-      </div>
+      <SearchBarInput
+        submit={this.submit}
+        handleChange={this.handleChange}
+        queryValue={this.state.queryValue}
+      />
     );
   }
 }

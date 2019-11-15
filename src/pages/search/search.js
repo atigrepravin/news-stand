@@ -40,11 +40,12 @@ class Search extends React.Component {
     this.fetchArticles(parsedString);
   }
 
-  componentWillReceiveProps(nextProps) {
+  shouldComponentUpdate(nextProps) {
     if (this.props.location.search !== nextProps.location.search) {
       let parsedString = queryString.parse(nextProps.location.search).q;
       this.fetchArticles(parsedString);
     }
+    return true;
   }
 
   render() {

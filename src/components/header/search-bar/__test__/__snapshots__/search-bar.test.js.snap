@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar/> :  It should render searchbar markup 1`] = `
+<div
+  class="container"
+>
+  <form>
+    <div
+      class="searchWrapper"
+    >
+      <input
+        class="input"
+        type="search"
+        name="query"
+        placeholder="Search News"
+        value=""
+      />
+    </div>
+  </form>
+</div>
+`;
