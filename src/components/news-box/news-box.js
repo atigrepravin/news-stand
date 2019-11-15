@@ -3,10 +3,10 @@ import ArticleList from '../article-list';
 import s from './news-box.module.css';
 
 const NewsBox = ({ heading, articles, isLoading }) => (
-  <section>
+  <React.Fragment>
     {heading && <h2 className={s.heading}>{heading}</h2>}
     <ArticleList articles={articles} isLoading={isLoading} />
-  </section>
+  </React.Fragment>
 );
 
 export default NewsBox;

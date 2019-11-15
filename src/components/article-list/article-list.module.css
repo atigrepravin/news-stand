@@ -3,6 +3,10 @@
   grid-gap: 30px;
   grid-template-columns: repeat(4, 1fr);
 }
+.articles.viewList {
+  grid-gap: 15px;
+  grid-template-columns: repeat(1, 1fr);
+}
 
 .loader {
   display: flex;

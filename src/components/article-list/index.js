@@ -4,7 +4,7 @@ import s from './article-list.module.css';
 
 const ArticleList = ({ articles, isLoading }) => {
   return (
-    <div className={s.articles}>
+    <section className={`${s.articles} ${s.viewList}`}>
       {isLoading && <div className={s.loader}>Loading...</div>}
       {!isLoading && !articles.length && <div>No results found.</div>}
       {articles.map((article, index) => {
@@ -17,7 +17,7 @@ const ArticleList = ({ articles, isLoading }) => {
           />
         );
       })}
-    </div>
+    </section>
   );
 };
 
