@@ -14,3 +14,6 @@
 .listItem:hover {
   background-color: #f1f1f1;
 }
+.listItem.active {
+  background-color: #e4e4e4;
+}
