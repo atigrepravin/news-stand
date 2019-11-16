@@ -1,7 +1,7 @@
 import { CHANGE_VIEW_AS } from './actions';
 
 const initialState = {
-  viewAs: 'icon'
+  viewAs: 'list'
 };
 const listingView = (state, action) => {
   switch (action.type) {

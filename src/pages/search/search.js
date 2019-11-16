@@ -14,7 +14,9 @@ class Search extends React.Component {
 
   fetchArticles = query => {
     NewsApi.topHeadlines({
-      q: query
+      q: query,
+      sortBy: 'relevancy',
+      country: 'in'
     }).then(headelinesResponse => {
       NewsApi.everything({
         q: query,

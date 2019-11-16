@@ -1,11 +1,14 @@
 .article {
-  border-radius: 5px;
+  border-radius: 25px;
+  overflow: hidden;
   border: 1px solid #0000001a;
+  background-color: #fcfcfc;
 }
 .article.list {
   display: flex;
   border-radius: 0;
   border-width: 0 0 1px;
+  background-color: #f5f5f5;
 }
 .article.list .imageHolder {
   margin: 20px 0 20px 20px;
@@ -14,8 +17,6 @@
 }
 
 .imageHolder {
-  position: relative;
-  overflow: hidden;
   max-height: 400px;
 }
 
