@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from 'rtl-custom-utils';
 import '@testing-library/jest-dom/extend-expect';
 import NewsBox from '../news-box';
 

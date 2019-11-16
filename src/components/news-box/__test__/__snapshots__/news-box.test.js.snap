@@ -1,72 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`it should render a story 1`] = `
-<section>
-  <h2
-    class="heading"
-  >
-    Top Headlines
-  </h2>
-  <div
-    class="articles"
-  >
-    <article
-      class="article"
-    >
-      <figure
-        class="imageHolder"
-      >
-        <a
-          target="_blank"
-          href="http://timesofindia.indiatimes.com/business/india-business/ril-to-restructure-jio-look-for-investors/articleshow/71769767.cms"
-        >
-          <img
-            src="https://static.toiimg.com/thumb/msid-71770829,width-1070,height-580,imgsize-162969,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
-          />
-        </a>
-      </figure>
-      <div
-        class="content"
-      >
-        <h3
-          class="title"
-        >
-          <a
-            target="_blank"
-            href="http://timesofindia.indiatimes.com/business/india-business/ril-to-restructure-jio-look-for-investors/articleshow/71769767.cms"
-          >
-            Reliance Industries to restructure Jio, look for investors - Times of India
-          </a>
-        </h3>
-        <div
-          class="description"
-        >
-          <a
-            target="_blank"
-            href="http://timesofindia.indiatimes.com/business/india-business/ril-to-restructure-jio-look-for-investors/articleshow/71769767.cms"
-          >
-            India Business News: Mukesh Ambani’s RIL on Friday announced a restructuring of its digital and telecom business, including Jio, through a multi-step process as it readies
-          </a>
-        </div>
-        <div
-          class="meta"
-        >
-          by
-          <a
-            href="//timesofindia.indiatimes.com"
-            target="_blank"
-            class="author"
-          >
-            The Times of India
-          </a>
-          <span
-            class="timestamp"
-          >
-            Oct 26, 2019
-          </span>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
+<h2
+  class="heading"
+>
+  Top Headlines
+</h2>
 `;

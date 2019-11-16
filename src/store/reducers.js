@@ -1,6 +1,6 @@
 import { CHANGE_VIEW_AS } from './actions';
 
-const intialState = {
+const initialState = {
   viewAs: 'icon'
 };
 const listingView = (state, action) => {
@@ -12,7 +12,7 @@ const listingView = (state, action) => {
   }
 };
 
-export default (state = intialState, action) => {
+export default (state = initialState, action) => {
   return {
     viewAs: listingView(state.viewAs, action)
   };

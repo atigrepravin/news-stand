@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from 'rtl-custom-utils';
 import ArticleList from '..';
 import { MOCK_ARTICLE_LIST } from '../../../mock-data';
 

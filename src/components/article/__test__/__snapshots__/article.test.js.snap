@@ -3,7 +3,7 @@
 exports[`<Article/> should render an article 1`] = `
 <div>
   <article
-    class="article"
+    class="article undefined"
   >
     <figure
       class="imageHolder"

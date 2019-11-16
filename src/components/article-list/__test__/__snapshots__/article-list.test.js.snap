@@ -2,8 +2,8 @@
 
 exports[`<ArticleList/> :  It should not render any article 1`] = `
 <div>
-  <div
-    class="articles"
+  <section
+    class="articles icon"
   >
     <div
       class="loader"
@@ -11,7 +11,7 @@ exports[`<ArticleList/> :  It should not render any article 1`] = `
       Loading...
     </div>
     <article
-      class="article"
+      class="article icon"
     >
       <figure
         class="imageHolder"
@@ -68,7 +68,7 @@ exports[`<ArticleList/> :  It should not render any article 1`] = `
       </div>
     </article>
     <article
-      class="article"
+      class="article icon"
     >
       <figure
         class="imageHolder"
@@ -125,7 +125,7 @@ exports[`<ArticleList/> :  It should not render any article 1`] = `
       </div>
     </article>
     <article
-      class="article"
+      class="article icon"
     >
       <figure
         class="imageHolder"
@@ -181,17 +181,17 @@ exports[`<ArticleList/> :  It should not render any article 1`] = `
         </div>
       </div>
     </article>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`<ArticleList/> :  It should render 3 articles 1`] = `
 <div>
-  <div
-    class="articles"
+  <section
+    class="articles icon"
   >
     <article
-      class="article"
+      class="article icon"
     >
       <figure
         class="imageHolder"
@@ -248,7 +248,7 @@ exports[`<ArticleList/> :  It should render 3 articles 1`] = `
       </div>
     </article>
     <article
-      class="article"
+      class="article icon"
     >
       <figure
         class="imageHolder"
@@ -305,7 +305,7 @@ exports[`<ArticleList/> :  It should render 3 articles 1`] = `
       </div>
     </article>
     <article
-      class="article"
+      class="article icon"
     >
       <figure
         class="imageHolder"
@@ -361,6 +361,6 @@ exports[`<ArticleList/> :  It should render 3 articles 1`] = `
         </div>
       </div>
     </article>
-  </div>
+  </section>
 </div>
 `;

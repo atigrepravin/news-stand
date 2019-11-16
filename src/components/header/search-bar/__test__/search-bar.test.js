@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from 'rtl-custom-utils';
 import '@testing-library/jest-dom/extend-expect';
 import SearchBar from '../search-bar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
