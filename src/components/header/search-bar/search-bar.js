@@ -15,9 +15,11 @@ class SearchBar extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
-      queryValue: queryString.parse(this.props.location.search).q
-    });
+    const urlQuery = queryString.parse(this.props.location.search).q;
+    urlQuery &&
+      this.setState({
+        queryValue: urlQuery
+      });
   }
 
   submit = e => {
