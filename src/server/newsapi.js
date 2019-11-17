@@ -20,12 +20,4 @@ NewsApi.everything = params =>
     })
   ).then(response => response.json());
 
-NewsApi.sources = params =>
-  fetch(
-    WithQuery('https://newsapi.org/v2/sources', {
-      ...params,
-      apiKey: NewsApi.key
-    })
-  ).then(response => response.json());
-
 export default NewsApi;
