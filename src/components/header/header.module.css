@@ -5,20 +5,20 @@
   top: 0;
   width: 100%;
   background-color: #fff;
-  padding: 0 50px;
+  padding: 0 30px;
   display: flex;
-  height: 70px;
+  min-height: 70px;
   justify-content: space-between;
   align-items: center;
   z-index: 99;
 }
 
 .logoWrapper {
-  font-family: "Times New Roman";
+  font-family: 'Times New Roman';
   font-size: 1.5rem;
   font-weight: 400;
   line-height: normal;
-  margin: 0;
+  margin: 0 20px 0 0;
   padding: 0;
 }
 

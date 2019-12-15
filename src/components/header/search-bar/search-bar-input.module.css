@@ -1,5 +1,5 @@
 .container {
-  width: 50%;
+  flex: 0 1 700px;
 }
 .searchWrapper {
   height: 45px;
@@ -17,9 +17,9 @@
 }
 
 .input:focus {
-  background-color: #efefef
+  background-color: #efefef;
 }
 
 .input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #efefef inset;
+  -webkit-box-shadow: 0 0 0 30px #efefef inset;
 }
