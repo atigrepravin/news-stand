@@ -8,7 +8,8 @@ NewsApi.topHeadlines = params =>
   fetch(
     WithQuery('https://newsapi.org/v2/top-headlines', {
       ...params,
-      apiKey: NewsApi.key
+      apiKey: NewsApi.key,
+      pageSize: 100
     })
   ).then(response => response.json());
 
@@ -16,7 +17,8 @@ NewsApi.everything = params =>
   fetch(
     WithQuery('https://newsapi.org/v2/everything', {
       ...params,
-      apiKey: NewsApi.key
+      apiKey: NewsApi.key,
+      pageSize: 100
     })
   ).then(response => response.json());
 
