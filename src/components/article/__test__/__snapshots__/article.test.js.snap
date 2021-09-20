@@ -14,6 +14,7 @@ exports[`<Article/> should render an article 1`] = `
       >
         <img
           src="https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-1md2vcqecn2d58pku3nt05spm4-20191026130151.jpeg"
+          alt="Consuming low salt can keep dementia way - The Asian Age"
         />
       </a>
     </figure>

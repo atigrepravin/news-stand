@@ -22,6 +22,7 @@ exports[`<ArticleList/> :  It should not render any article 1`] = `
         >
           <img
             src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201910/oneplus_7t-647x363.png?U1LzNdY28r_ou5wtAJR1.7nPL4MCYPMH"
+            alt="From today you can buy OnePlus 7T for as low as Rs 32,499, but for limited time: Here is how - India Today"
           />
         </a>
       </figure>
@@ -79,6 +80,7 @@ exports[`<ArticleList/> :  It should not render any article 1`] = `
         >
           <img
             src="https://fdn.gsmarena.com/imgroot/news/19/10/huawei-nova-6-5g-render/-476x249w4/gsmarena_001.jpg"
+            alt="Huawei nova 6 5G could be on the way, has a dual punch-hole selfie cam - GSMArena.com news - GSMArena.com"
           />
         </a>
       </figure>
@@ -136,6 +138,7 @@ exports[`<ArticleList/> :  It should not render any article 1`] = `
         >
           <img
             src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/10/26/Pictures/_4877348a-f7cb-11e9-800c-f2f87dfa36aa.jpg"
+            alt="Flipkart Festive Bonanza: Xiaomi Poco F1, Samsung Galaxy S9, Google Pixel 3 available with huge dis... - Hindustan Times"
           />
         </a>
       </figure>
@@ -202,6 +205,7 @@ exports[`<ArticleList/> :  It should render 3 articles 1`] = `
         >
           <img
             src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201910/oneplus_7t-647x363.png?U1LzNdY28r_ou5wtAJR1.7nPL4MCYPMH"
+            alt="From today you can buy OnePlus 7T for as low as Rs 32,499, but for limited time: Here is how - India Today"
           />
         </a>
       </figure>
@@ -259,6 +263,7 @@ exports[`<ArticleList/> :  It should render 3 articles 1`] = `
         >
           <img
             src="https://fdn.gsmarena.com/imgroot/news/19/10/huawei-nova-6-5g-render/-476x249w4/gsmarena_001.jpg"
+            alt="Huawei nova 6 5G could be on the way, has a dual punch-hole selfie cam - GSMArena.com news - GSMArena.com"
           />
         </a>
       </figure>
@@ -316,6 +321,7 @@ exports[`<ArticleList/> :  It should render 3 articles 1`] = `
         >
           <img
             src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2019/10/26/Pictures/_4877348a-f7cb-11e9-800c-f2f87dfa36aa.jpg"
+            alt="Flipkart Festive Bonanza: Xiaomi Poco F1, Samsung Galaxy S9, Google Pixel 3 available with huge dis... - Hindustan Times"
           />
         </a>
       </figure>
