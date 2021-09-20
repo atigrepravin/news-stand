@@ -8,7 +8,7 @@ const Article = ({ article, authorUrl, viewAs }) => (
     {article.urlToImage && (
       <figure className={s.imageHolder}>
         <a target='_blank' href={article.url}>
-          <img src={article.urlToImage} />
+          <img src={article.urlToImage} alt={article.title} />
         </a>
       </figure>
     )}
