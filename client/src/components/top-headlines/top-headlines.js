@@ -117,7 +117,6 @@ class TopHeadlines extends React.Component {
         </div>
 
         <NewsBox
-          heading='Top Headlines'
           articles={this.state.articles}
           isLoading={this.state.isLoading}
         />
