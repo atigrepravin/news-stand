@@ -20,7 +20,7 @@ app.get('/api/v1/everything', everything)
 });
   
 
-
-app.listen('3001', () => {
-    console.log('Backend server is running on 3001...')
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+    console.log(`Server is listening on ${port}...`)
 })
