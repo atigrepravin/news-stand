@@ -1,9 +1,6 @@
 {
   "name": "news-stand",
   "version": "0.1.0",
-  "engines": {
-    "node": "8.16.2"
-  },
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
