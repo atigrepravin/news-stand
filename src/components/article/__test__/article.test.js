@@ -1,9 +1,9 @@
-import React from 'react';
-import { render } from 'rtl-custom-utils';
-import Article from '..';
-import { MOCK_ARTICLE } from '../../../mock-data';
+import React from "react";
+import { render } from "rtl-custom-utils";
+import Article from "..";
+import { MOCK_ARTICLE } from "../../../mock-data";
 
-test('<Article/> should render an article', () => {
+test("<Article/> should render an article", () => {
   const { container } = render(
     <Article
       article={MOCK_ARTICLE}

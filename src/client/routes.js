@@ -11,7 +11,7 @@ const Routes = () => (
       <div className="app-container">
         <Route exact path="/" component={Home} />
         <Route exact={true} path="/Search" component={Search} />
-    </div>
+      </div>
     </React.Fragment>
   </Router>
 )
