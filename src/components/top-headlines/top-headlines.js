@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsBox from '../news-box/news-box';
-import NewsApi from '../../server/newsapi';
+import NewsApi from '../../api-services/newsapi';
 import s from './top-headlines.module.css';
 
 const categories = [

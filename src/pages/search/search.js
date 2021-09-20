@@ -1,7 +1,7 @@
 import React from 'react';
 import queryString from 'query-string';
 import NewsBox from '../../components/news-box/news-box';
-import NewsApi from '../../server/newsapi';
+import NewsApi from '../../api-services/newsapi';
 
 class Search extends React.Component {
   constructor(props) {
