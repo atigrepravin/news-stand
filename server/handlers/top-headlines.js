@@ -13,7 +13,7 @@ const topHeadlines = async (req, res) => {
 
     return res.send(result.data);
   } catch (error) {
-    return res.send({ message: "Something went wrong", error });
+    return res.send({ message: "Something went wrong" });
   }
 };
 
