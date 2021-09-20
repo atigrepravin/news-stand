@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Article from '../article';
 import s from './article-list.module.css';
 
-const ArticleList = ({ articles, isLoading, viewAs }) => (
+const ArticleList = ({ articles = [], isLoading, viewAs }) => (
   <section className={`${s.articles} ${s[viewAs]}`}>
     {isLoading && <div className={s.loader}>Loading...</div>}
     {!isLoading && !articles.length && <div>No results found.</div>}
