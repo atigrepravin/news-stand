@@ -55,8 +55,8 @@
     "with-query": "^1.2.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "node scripts/start.js --env=production",
+    "build": "GENERATE_SOURCEMAP=false node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
